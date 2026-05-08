@@ -21,6 +21,15 @@
             align-items: center;
             justify-content: center;
         }
+
+        /* Perbaikan khusus untuk HP agar foto kelihatan full */
+        @media (max-width: 768px) {
+            .hero-gradient {
+                background-attachment: scroll; /* Mematikan fixed di HP agar tidak nge-bug */
+                background-size: cover;
+                background-position: top center; /* Memastikan wajah di foto bagian atas terlihat */
+            }
+        }
         
         .card-hover { transition: all 0.3s ease; }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2); }
@@ -58,10 +67,10 @@
             <span class="bg-orange-500/20 text-orange-400 border border-orange-500/40 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block backdrop-blur-sm">
                 POS WAWAN
             </span>
-            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 text-white tracking-tight drop-shadow-2xl">
+            <h2 class="text-4xl md:text-7xl font-extrabold mb-6 text-white tracking-tight drop-shadow-2xl">
                 Markas <span class="text-orange-500">Solidaritas</span><br>Tanpa Batas
             </h2>
-            <p class="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+            <p class="text-base md:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
                 Tempat dimana kopi tidak pernah dingin dan obrolan tidak pernah garing. 
                 Satu tongkrongan, sejuta cerita konyol.
             </p>
@@ -80,7 +89,7 @@
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-slate-800/50 border border-slate-700 p-8 rounded-3xl card-hover relative overflow-hidden group">
                     <div class="absolute top-0 right-0 p-4 bg-orange-500 text-white font-bold rounded-bl-2xl">NEW</div>
-                    <h4 class="text-2xl font-bold mb-4 group-hover:text-orange-500 transition-colors text-white">Karaoke</h4>
+                    <h4 class="text-2xl font-bold mb-4 group-hover:text-orange-500 transition-colors text-white">Karaoke Malam Jumat</h4>
                     <div class="space-y-3 text-slate-400 mb-8">
                         <div class="flex items-center"><i class="far fa-calendar-alt w-6 text-orange-500"></i> Kamis, 14 Mei 2026</div>
                         <div class="flex items-center"><i class="fas fa-map-marker-alt w-6 text-orange-500"></i> Happy Puppy Karaoke</div>
@@ -114,19 +123,17 @@
 
         <!-- Section: Anggota (Total 16 Orang) -->
         <section id="anggota" class="mb-24">
-            <h3 class="text-3xl font-bold text-white mb-12 text-center">LINE <span class="text-orange-500">UP</span></h3>
+            <h3 class="text-3xl font-bold text-white mb-12 text-center">Anggota <span class="text-orange-500">Solid</span></h3>
             
-            <!-- 1 Orang Paling Atas (Pusat) -->
             <div class="flex justify-center mb-16">
                 <div class="text-center member-card group">
                     <div class="w-40 h-40 md:w-48 md:h-48 mx-auto mb-4 rounded-full overflow-hidden border-4 border-orange-500 transition-all duration-300 orange-glow">
                         <img src="member1.jpeg" alt="Nama Utama" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
-                    <h4 class="text-white font-extrabold text-xl group-hover:text-orange-500 transition-colors uppercase">Ayah Wawan</h4>
+                    <h4 class="text-white font-extrabold text-xl group-hover:text-orange-500 transition-colors uppercase">Nama Utama</h4>
                 </div>
             </div>
 
-            <!-- 15 Anggota Lainnya (Grid) -->
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-12 gap-x-6">
                 <script>
                     for(let i=2; i<=16; i++) {
