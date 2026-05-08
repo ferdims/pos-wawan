@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pos Wawan | Markas Solid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        
+        .hero-gradient { 
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.7)), url('bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2); }
+        .orange-glow { box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
+        .member-card:hover img { transform: scale(1.1); }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-200">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-nav p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center orange-glow">
+                    <i class="fas fa-fire-alt text-white text-xl"></i>
+                </div>
+                <h1 class="text-xl font-extrabold tracking-tighter text-white">POS <span class="text-orange-500">WAWAN</span></h1>
+            </div>
+            <div class="space-x-8 hidden md:flex font-medium text-sm tracking-wide">
+                <a href="#agenda" class="hover:text-orange-500 transition-colors">AGENDA</a>
+                <a href="#galeri" class="hover:text-orange-500 transition-colors">GALERI</a>
+                <a href="#anggota" class="hover:text-orange-500 transition-colors">ANGGOTA</a>
+                <a href="#rules" class="hover:text-orange-500 transition-colors">ATURAN</a>
+            </div>
+            <button class="md:hidden text-2xl text-orange-500"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient px-4 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute inset-0" style="background-image: radial-gradient(#f97316 1px, transparent 1px); background-size: 40px 40px;"></div>
+        </div>
+        <div class="relative z-10">
+            <span class="bg-orange-500/20 text-orange-400 border border-orange-500/40 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block backdrop-blur-sm">
+                POS WAWAN
+            </span>
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 text-white tracking-tight drop-shadow-2xl">
+                Markas <span class="text-orange-500">Solidaritas</span><br>Tanpa Batas
+            </h2>
+            <p class="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+                Tempat dimana kopi tidak pernah dingin dan obrolan tidak pernah garing. 
+                Satu tongkrongan, sejuta cerita konyol.
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-16 px-4">
+        
+        <!-- Section 1: Agenda -->
+        <section id="agenda" class="mb-24">
+            <div class="flex items-center justify-between mb-10">
+                <h3 class="text-3xl font-bold text-white"><i class="far fa-calendar-check text-orange-500 mr-3"></i>Next Agenda</h3>
+                <div class="h-1 flex-grow mx-6 bg-slate-800 rounded-full hidden md:block"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-800/50 border border-slate-700 p-8 rounded-3xl card-hover relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 bg-orange-500 text-white font-bold rounded-bl-2xl">NEW</div>
+                    <h4 class="text-2xl font-bold mb-4 group-hover:text-orange-500 transition-colors text-white">Karaoke</h4>
+                    <div class="space-y-3 text-slate-400 mb-8">
+                        <div class="flex items-center"><i class="far fa-calendar-alt w-6 text-orange-500"></i> Kamis, 14 Mei 2026</div>
+                        <div class="flex items-center"><i class="fas fa-map-marker-alt w-6 text-orange-500"></i> Happy Puppy Karaoke</div>
+                    </div>
+                    <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 rounded-2xl transition-all shadow-lg shadow-orange-500/20 uppercase tracking-wider text-sm">
+                        Join Sekarang <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+
+                <div class="bg-slate-800/30 border border-slate-700/50 p-8 rounded-3xl flex flex-col justify-center items-center text-center">
+                    <p class="text-slate-500 italic text-lg">"Gak ada lo, gak rame. Jangan alasan sibuk terus."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Galeri -->
+        <section id="galeri" class="mb-24">
+            <h3 class="text-3xl font-bold text-white mb-10 text-center">Dokumentasi <span class="text-orange-500">Terbaik</span></h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <script>
+                    for(let i=1; i<=8; i++) {
+                        document.write(`
+                            <div class="group relative h-64 overflow-hidden rounded-2xl bg-slate-800 border border-slate-700">
+                                <img src="foto${i}.jpeg" alt="Momen ${i}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                        `);
+                    }
+                </script>
+            </div>
+        </section>
+
+        <!-- Section: Anggota (Total 16 Orang) -->
+        <section id="anggota" class="mb-24">
+            <h3 class="text-3xl font-bold text-white mb-12 text-center">LINE <span class="text-orange-500">UP</span></h3>
+            
+            <!-- 1 Orang Paling Atas (Pusat) -->
+            <div class="flex justify-center mb-16">
+                <div class="text-center member-card group">
+                    <div class="w-40 h-40 md:w-48 md:h-48 mx-auto mb-4 rounded-full overflow-hidden border-4 border-orange-500 transition-all duration-300 orange-glow">
+                        <img src="member1.jpeg" alt="Nama Utama" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <h4 class="text-white font-extrabold text-xl group-hover:text-orange-500 transition-colors uppercase">Ayah Wawan</h4>
+                </div>
+            </div>
+
+            <!-- 15 Anggota Lainnya (Grid) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-12 gap-x-6">
+                <script>
+                    for(let i=2; i<=16; i++) {
+                        document.write(`
+                            <div class="text-center member-card group">
+                                <div class="w-28 h-28 md:w-32 md:h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-slate-800 group-hover:border-orange-500 transition-all duration-300">
+                                    <img src="member${i}.jpeg" alt="Anggota ${i}" class="w-full h-full object-cover transition-transform duration-500">
+                                </div>
+                                <h4 class="text-white font-bold text-sm md:text-base group-hover:text-orange-500 transition-colors uppercase">Nama Anggota ${i}</h4>
+                            </div>
+                        `);
+                    }
+                </script>
+            </div>
+        </section>
+
+        <!-- Section 3: Rules -->
+        <section id="rules" class="mb-12">
+            <div class="bg-gradient-to-br from-orange-500 to-orange-600 p-1 rounded-[2.5rem]">
+                <div class="bg-[#0f172a] p-10 rounded-[2.3rem] relative overflow-hidden">
+                    <h3 class="text-3xl font-bold mb-8 text-orange-500">Aturan Main Pos</h3>
+                    <div class="grid md:grid-cols-2 gap-6 relative z-10 text-slate-300">
+                        <div class="flex items-start space-x-4">
+                            <span class="w-8 h-8 rounded-full bg-orange-500/10 text-orange-500 flex items-center justify-center font-bold flex-shrink-0 text-sm">1</span>
+                            <p>Datang bawa rokok sendiri, balik jangan bawa korek temen (Wajib!).</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="w-8 h-8 rounded-full bg-orange-500/10 text-orange-500 flex items-center justify-center font-bold flex-shrink-0 text-sm">2</span>
+                            <p>Dilarang baper kalau lagi dibecandain. Mental harus baja.</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="w-8 h-8 rounded-full bg-orange-500/10 text-orange-500 flex items-center justify-center font-bold flex-shrink-0 text-sm">3</span>
+                            <p>Sampah buang di tempatnya (bukan di bawah karpet atau sela kursi).</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="w-8 h-8 rounded-full bg-orange-500/10 text-orange-500 flex items-center justify-center font-bold flex-shrink-0 text-sm">4</span>
+                            <p>Solidaritas nomor satu, masalah pribadi tinggal di gerbang depan.</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-gavel absolute -bottom-10 -right-10 text-[12rem] text-white/5 rotate-12"></i>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-800 py-12 text-center">
+        <div class="mb-4 flex justify-center space-x-6">
+            <a href="#" class="text-slate-500 hover:text-orange-500 transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
+            <a href="#" class="text-slate-500 hover:text-orange-500 transition-colors"><i class="fab fa-whatsapp text-2xl"></i></a>
+        </div>
+        <p class="text-slate-500 text-xs font-bold tracking-widest uppercase">&copy; 2026 POS WAWAN - Markas Solidaritas Tanpa Batas</p>
+    </footer>
+
+</body>
+</html>
